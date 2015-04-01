@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/wave-developers/wave-developers.github.io-source/issues"
   },
-  "homepage": "https://github.com/wave-developers/wave-developers.github.io-source"
+  "homepage": "https://github.com/wave-developers/wave-developers.github.io-source",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
