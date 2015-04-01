@@ -1,0 +1,31 @@
+# Theme name.
+theme: tiny
+
+# site globals
+site:
+  url: http://wave-developers.github.io
+  name: Eugene Krevenets
+  description: Wave developers meetup communitry
+  build: dist/
+
+# Main menu
+menus:
+  - name: Home
+    url: /
+
+  - name: About
+    url: /about.html
+
+  - name: Contact
+    url: /contact.html
+
+# Disqus configuration, comment these lines to disable it
+disqus:
+  shortname: wave-develoeprs-gh-page
+
+google:
+  analytics: UA-38043860-8 # Google analytics
+  verification: "-WuDSQXcQ3LYVkL0N9vaxK-5xrxXS4I-nB9t5qreNjU" # Google webmaster verification
+
+twitter:
+  name: _hyzhak_en_
