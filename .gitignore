@@ -4,3 +4,5 @@
 # DEPS
 node_modules/
 
+# BUILD
+dist
