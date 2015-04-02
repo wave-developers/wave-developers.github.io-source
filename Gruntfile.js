@@ -25,10 +25,21 @@ module.exports = function(grunt) {
                     { expand: true, src: ['posts/*.md'], dest: '<%= config.site.build %>/'}
                 ]
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist',
+                branch: 'master',
+                tag: '<%= pkg.version %>',
+                repo: 'git@github.com:wave-developers/wave-developers.github.io.git'
+            },
+            src: ['**']
         }
     });
 
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('default', ['assemble']);
+    grunt.registerTask('default', ['assemble', 'gh-pages']);
 };
