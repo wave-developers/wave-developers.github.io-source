@@ -26,6 +26,11 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        bump: {
+            options: {
+                pushTo: 'origin'
+            }
+        },
         'gh-pages': {
             options: {
                 base: 'dist',
