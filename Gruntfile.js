@@ -46,5 +46,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('default', ['assemble', 'gh-pages']);
+    grunt.registerTask('publish', ['assemble', 'gh-pages']);
+    grunt.registerTask('default', ['assemble']);
 };
