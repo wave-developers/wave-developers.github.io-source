@@ -43,9 +43,9 @@ module.exports = function(grunt) {
         watch: {
             all: {
                 files: [
-                    'pages/*',
-                    'posts/*',
-                    'themes/*'
+                    'pages/**/*',
+                    'posts/**/*',
+                    'themes/**/*'
                 ],
                 tasks: ['build'],
                 options: {
