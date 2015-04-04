@@ -39,13 +39,30 @@ module.exports = function(grunt) {
                 repo: 'git@github.com:wave-developers/wave-developers.github.io.git'
             },
             src: ['**']
+        },
+        watch: {
+            all: {
+                files: [
+                    'pages/*',
+                    'posts/*',
+                    'themes/*'
+                ],
+                tasks: ['build'],
+                options: {
+                    livereload: true,
+                    reload: true,
+                    spawn: false
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('publish', ['assemble', 'gh-pages']);
-    grunt.registerTask('default', ['assemble']);
+    grunt.registerTask('build', ['assemble']);
+    grunt.registerTask('publish', ['build', 'gh-pages']);
+    grunt.registerTask('default', ['build', 'watch']);
 };
