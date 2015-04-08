@@ -18,7 +18,7 @@ layout: default.hbs
     <h2>Before</h2>
     {{#withSort pages 'data.date' dir='desc'}}
         {{#is data.section 'event'}}
-            <a href="#">
+            <a href="events/{{pagename}}">
                 <div>
                     <header>
                         <h2>
