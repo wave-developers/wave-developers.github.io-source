@@ -2,12 +2,38 @@
 layout: default.hbs
 ---
 
-test!!!!
+<article>
+    <h1>FB Link </h1>
+    (join us eng/ru groups)
 
-{{#markdown}}
-  # Hello world
+    <h1>About Group</h1>
+    (short)
 
-  ## 2
+    <h1>Events</h1>
 
-  ### 3
-{{/markdown}}
+    <h2>Soon</h2>
+
+    <button class="btn btn-primary">Take a part 25 Apr!</button>
+
+    <h2>Before</h2>
+    {{#withSort pages 'data.date' dir='desc'}}
+        {{#is data.section 'event'}}
+            <a href="#">
+                <div>
+                    <header>
+                        <h2>
+                            {{data.title}}
+                        </h2>
+                      <span>
+                          {{data.subtitle}}
+                      </span>
+                    </header>
+                    <img src="{{data.image}}" alt="{{data.title}}"
+                         height="200"/>
+                </div>
+            </a>
+        {{/is}}
+    {{else}}
+        <p>There no any events</p>
+    {{/withSort}}
+</article>

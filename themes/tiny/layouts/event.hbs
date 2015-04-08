@@ -1,0 +1,18 @@
+---
+layout: default.hbs
+---
+
+<article>
+    <header>
+        <h2><a href="#">{{ title }}</a></h2>
+        <span class="byline"> {{ subtitle }} </span>
+    </header>
+
+    <div>
+        {{#markdown}}
+            {{> body }}
+        {{/markdown}}
+
+        {{> disqus_thread }}
+    </div>
+</article>

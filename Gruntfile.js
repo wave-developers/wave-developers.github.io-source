@@ -19,10 +19,14 @@ module.exports = function(grunt) {
                 layoutdir: '<%= theme %>/layouts',
                 layout: 'default.hbs'
             },
-            'wave-developers': {
+            site: {
                 files: [
-                    { '<%= config.site.build %>/': ['pages/*.hbs'] },
-                    { expand: true, src: ['posts/*.md'], dest: '<%= config.site.build %>/'}
+                    {
+                        '<%= config.site.build %>/events/': ['events/*.md']
+                    },
+                    {
+                        '<%= config.site.build %>/': ['pages/*.hbs']
+                    }
                 ]
             }
         },
@@ -43,8 +47,9 @@ module.exports = function(grunt) {
         watch: {
             all: {
                 files: [
+                    'Gruntfile.js',
                     'pages/**/*',
-                    'posts/**/*',
+                    'events/**/*',
                     'themes/**/*'
                 ],
                 tasks: ['build'],
