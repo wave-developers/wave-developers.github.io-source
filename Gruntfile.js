@@ -44,6 +44,11 @@ module.exports = function(grunt) {
                 pushTo: 'origin'
             }
         },
+        clean: {
+            dist: [
+                '<%= config.site.build %>'
+            ]
+        },
         'gh-pages': {
             options: {
                 base: 'dist',
@@ -73,10 +78,11 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('build', ['assemble']);
+    grunt.registerTask('build', ['clean', 'assemble']);
     grunt.registerTask('publish', ['build', 'gh-pages']);
     grunt.registerTask('default', ['build', 'watch']);
 };
