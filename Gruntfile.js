@@ -17,7 +17,16 @@ module.exports = function(grunt) {
                 helpers: 'helpers/*.js',
                 partials: ['<%= theme %>/includes/*.hbs'],
                 layoutdir: '<%= theme %>/layouts',
-                layout: 'default.hbs'
+                layout: 'default.hbs',
+
+                plugins: ['assemble-middleware-sitemap'],
+
+                sitemap: {
+                    dest: '<%= config.site.build %>',
+                    homepage: '<%= config.site.url %>',
+                    relativedest: '<%= config.site.build %>',
+                    changefreq: 'dayly'
+                }
             },
             site: {
                 files: [
