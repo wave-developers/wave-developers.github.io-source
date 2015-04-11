@@ -58,6 +58,25 @@ module.exports = function(grunt) {
             },
             src: ['**']
         },
+        less: {
+            expanded: {
+                options: {
+                    paths: ["css"]
+                },
+                files: {
+                    '<%= config.site.build %>/css/main.css': '<%= theme %>/less/*.less'
+                }
+            },
+            minified: {
+                options: {
+                    paths: ["css"],
+                    cleancss: true
+                },
+                files: {
+                    '<%= config.site.build %>/css/main.min.css': '<%= theme %>/less/*.less'
+                }
+            }
+        },
         watch: {
             all: {
                 files: [
@@ -79,10 +98,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('build', ['clean', 'assemble']);
+    grunt.registerTask('build', ['clean', 'assemble', 'less']);
     grunt.registerTask('publish', ['build', 'gh-pages']);
     grunt.registerTask('default', ['build', 'watch']);
 };
