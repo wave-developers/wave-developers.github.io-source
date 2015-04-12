@@ -49,6 +49,18 @@ module.exports = function(grunt) {
                 '<%= config.site.build %>'
             ]
         },
+        copy: {
+            events: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'events',
+                        src: '*.jpg',
+                        dest: '<%= config.site.build %>/events/'
+                    }
+                ]
+            }
+        },
         'gh-pages': {
             options: {
                 base: 'dist',
@@ -98,11 +110,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-gh-pages');
 
-    grunt.registerTask('build', ['clean', 'assemble', 'less']);
+    grunt.registerTask('build', ['clean', 'assemble', 'less', 'copy']);
     grunt.registerTask('publish', ['build', 'gh-pages']);
     grunt.registerTask('default', ['build', 'watch']);
 };

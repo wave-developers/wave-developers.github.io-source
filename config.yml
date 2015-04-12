@@ -6,7 +6,7 @@ site:
   url: http://wave-developers.github.io
   name: Wave Developers
   description: Wave developers meetup communitry
-  build: dist/
+  build: dist
 
 # Main menu
 menus:
