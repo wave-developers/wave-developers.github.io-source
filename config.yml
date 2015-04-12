@@ -4,20 +4,20 @@ theme: tiny
 # site globals
 site:
   url: http://wave-developers.github.io
-  name: Eugene Krevenets
+  name: Wave Developers
   description: Wave developers meetup communitry
   build: dist/
 
 # Main menu
 menus:
-  - name: Home
-    url: /
+  - name: Call 4 Speakers
+    url: /call.html
+
+  - name: Support
+    url: /support.html
 
   - name: About
     url: /about.html
-
-  - name: Contact
-    url: /contact.html
 
 # Disqus configuration, comment these lines to disable it
 disqus:
