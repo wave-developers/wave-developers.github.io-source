@@ -8,19 +8,19 @@ description: We make waves and change reality
 ---
 
 <article>
-    <h1>FB Link </h1>
-    (join us eng/ru groups)
+    <div class="text-center">
+        <div class="jumbotron">
+            <h1>Upcoming event</h1>
+            <p>
+                It will we in Montenegro (Crna Gora) soon
+            </p>
+            <p>
+                <button class="btn btn-primary">Join us at the end of May!</button>
+            </p>
+        </div>
+    </div>
 
-    <h1>About Group</h1>
-    (short)
-
-    <h1>Events</h1>
-
-    <h2>Soon</h2>
-
-    <button class="btn btn-primary">Take a part 25 Apr!</button>
-
-    <h2>Before</h2>
+    <h1>Before</h1>
     {{#withSort pages 'data.date' dir='desc'}}
         {{#is data.section 'event'}}
             <a href="events/{{pagename}}">
@@ -29,9 +29,9 @@ description: We make waves and change reality
                         <h2>
                             {{data.title}}
                         </h2>
-                      <span>
-                          {{data.subtitle}}
-                      </span>
+                        <span>
+                          {{data.description}}
+                        </span>
                     </header>
                     <img src="{{data.image}}" alt="{{data.title}}"
                          height="200"/>
