@@ -20,25 +20,34 @@ description: We make waves and change reality
         </div>
     </div>
 
-    <h1>Before</h1>
-    {{#withSort pages 'data.date' dir='desc'}}
-        {{#is data.section 'event'}}
-            <a href="events/{{pagename}}">
-                <div>
-                    <header>
-                        <h2>
-                            {{data.title}}
-                        </h2>
-                        <span>
-                          {{data.description}}
-                        </span>
-                    </header>
-                    <img src="{{data.image}}" alt="{{data.title}}"
-                         height="200"/>
-                </div>
-            </a>
-        {{/is}}
-    {{else}}
-        <p>There no any events</p>
-    {{/withSort}}
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h1>Before</h1>
+
+        {{#withSort pages 'data.date' dir='desc'}}
+            <div class="post-preview">
+                {{#is data.section 'event'}}
+                    <a href="events/{{pagename}}">
+                        <div>
+                            <header>
+                                <h2 class="post-title">
+                                    {{data.title}}
+                                </h2>
+                                <span class="post-subtitle">
+                                  {{data.description}}
+                                </span>
+                                <span class="post-meta">
+
+                                </span>
+                            </header>
+                            <div class="header-image" style="background-image: url('{{data.image}}')">
+
+                            </div>
+                        </div>
+                    </a>
+                {{/is}}
+            </div>
+        {{else}}
+            <p>There no any events</p>
+        {{/withSort}}
+    </div>
 </article>
