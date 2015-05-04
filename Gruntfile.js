@@ -57,6 +57,11 @@ module.exports = function(grunt) {
                         cwd: 'events',
                         src: '*.jpg',
                         dest: '<%= config.site.build %>/events/'
+                    },
+                    {
+                        expand: true,
+                        src: 'assets/images/*.jpg',
+                        dest: '<%= config.site.build %>'
                     }
                 ]
             }
