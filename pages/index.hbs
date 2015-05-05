@@ -33,8 +33,7 @@ image: "/events/2015-02-21.jpg"
             {{#withSort pages 'data.date' dir='desc'}}
                 <div>
                     {{#is data.section 'event'}}
-                        <a href="events/{{pagename}}">
-                            <div class="post-preview">
+                        <a href="events/{{pagename}}" class="post-preview">
                                 <h2 class="post-title">
                                     {{data.title}}
                                 </h2>
@@ -47,7 +46,6 @@ image: "/events/2015-02-21.jpg"
                                 <div class="header-image" style="background-image: url('{{data.image}}')">
 
                                 </div>
-                            </div>
                         </a>
                     {{/is}}
                 </div>
