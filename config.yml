@@ -28,4 +28,10 @@ google:
   verification: "-WuDSQXcQ3LYVkL0N9vaxK-5xrxXS4I-nB9t5qreNjU" # Google webmaster verification
 
 twitter:
-  name: _hyzhak_en_
+  account: hyzhak_en
+
+github:
+  account: wave-developers
+
+facebook:
+  account: Wave-Developers/547751192031667
