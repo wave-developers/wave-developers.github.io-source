@@ -1,0 +1,22 @@
+---
+layout: default.hbs
+
+section: root
+title: Contact Us
+description: We are open for all new
+
+image: "/assets/images/about-header.jpg"
+
+---
+
+<article class="text-center">
+    <h1>Contacts</h1>
+    <h2><i class="fa fa-envelope-square"></i> Email</h2>
+    <a target="_blank" href="mail:{{ config.email.account }}">{{ config.email.account }}</a>
+    <h2><i class="fa fa-github-square"></i> Github</h2>
+    <a target="_blank" href="http://github.com/{{ config.github.account }}/">github.com/{{ config.github.account }}</a>
+    <h2><i class="fa fa-facebook-official"></i> Facebook</h2>
+    <a target="_blank" href="http://facebook.com/pages/{{ config.facebook.account }}/">facebook.com/pages/{{ config.facebook.account }}</a>
+    <h2><i class="fa fa-twitter-square"></i> Twitter</h2>
+    <a target="_blank" href="http://twitter.com/{{ config.twitter.account }}/">twitter.com/{{ config.twitter.account }}</a>
+</article>

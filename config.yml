@@ -13,8 +13,11 @@ menus:
   - name: Call 4 Speakers
     url: /call.html
 
-  - name: Support
+  - name: Support Us
     url: /support.html
+
+  - name: Contact
+    url: /contact.html
 
   - name: About
     url: /about.html
@@ -35,3 +38,6 @@ github:
 
 facebook:
   account: Wave-Developers/547751192031667
+
+email:
+  account: wave.developers.team@gmail.com

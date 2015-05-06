@@ -97,6 +97,7 @@ module.exports = function(grunt) {
         watch: {
             all: {
                 files: [
+                    'config.yaml',
                     'Gruntfile.js',
                     'pages/**/*',
                     'events/**/*',
