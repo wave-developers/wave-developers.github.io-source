@@ -21,9 +21,9 @@ source: "edit/master/pages/index.hbs"
             </p>
 
             <p>
-                <button class="btn btn-danger btn-lg join-us" type="button"><i class="fa fa-anchor"></i>&nbsp;&nbsp;Join
+                <a href="/next.html" class="btn btn-danger btn-lg join-us" type="button"><i class="fa fa-anchor"></i>&nbsp;&nbsp;Join
                     us at the end of May!
-                </button>
+                </a>
             </p>
         </div>
     </div>
@@ -58,51 +58,6 @@ source: "edit/master/pages/index.hbs"
     </div>
     <div>
         <h1>Location</h1>
-        <script type="text/javascript"
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2f8Xuq-20sToONMNWIsQkX-Jjfw5H9mM">
-        </script>
-        <script type="text/javascript">
-            function initialize() {
-                var mapOptions = {
-                    center: { lat: 42.2040553, lng: 18.9458102},
-                    zoom: 9,
-                    scrollwheel: false
-                };
-
-                var map = new google.maps.Map(
-                        document.getElementById('map'),
-                        mapOptions);
-
-                var nextEventLoc = new google.maps.LatLng(
-                    {{ config.next.loc.lat }}, {{ config.next.loc.lng }}
-                );
-
-                var marker = new google.maps.Marker({
-                    position: nextEventLoc,
-                    animation: google.maps.Animation.DROP,
-                    title: 'Next Event!'
-                });
-
-                marker.setMap(map);
-
-//                TODO: search location by name venue
-//
-//                var geocoder = new google.maps.Geocoder();
-//                geocoder.geocode( { 'address': 'Herceg Novi, Russian Center'}, function(results, status) {
-//                    if (status == google.maps.GeocoderStatus.OK) {
-//                        map.setCenter(results[0].geometry.location);
-//                        var marker = new google.maps.Marker({
-//                            map: map,
-//                            position: results[0].geometry.location
-//                        });
-//                    } else {
-//                        alert('Geocode was not successful for the following reason: ' + status);
-//                    }
-//                });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-
-        <section id="map" style="height: 450px"></section>
+        {{>next_event_map}}
     </div>
 </article>
