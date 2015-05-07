@@ -42,8 +42,21 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
+                        {{#if page.source}}
+
+                            <li>
+                                <a target="_blank" href="https://github.com/wave-developers/wave-developers.github.io-source/{{ page.source }}"
+                                   title="Help improve this page">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-pencil fa-inverse"></i>
+                                </span>
+                                </a>
+                            </li>
+
+                        {{/if}}
                         <li>
-                            <a href="https://twitter.com/{{ config.twitter.account }}">
+                            <a target="_blank" href="https://twitter.com/{{ config.twitter.account }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -51,7 +64,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/pages/{{ config.facebook.account }}">
+                            <a target="_blank" href="https://www.facebook.com/pages/{{ config.facebook.account }}">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -59,7 +72,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/{{ config.github.account }}">
+                            <a target="_blank" href="https://github.com/{{ config.github.account }}">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
