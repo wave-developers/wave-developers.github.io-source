@@ -44,3 +44,8 @@ facebook:
 
 email:
   account: wave.developers.team@gmail.com
+
+next:
+  loc:
+    lat: 42.453247
+    lng: 18.533930
