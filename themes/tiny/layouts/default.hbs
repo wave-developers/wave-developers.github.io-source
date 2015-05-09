@@ -45,7 +45,7 @@
                         {{#if page.source}}
 
                             <li>
-                                <a target="_blank" href="https://github.com/wave-developers/wave-developers.github.io-source/{{ page.source }}"
+                                <a class="text-danger" target="_blank" href="https://github.com/wave-developers/wave-developers.github.io-source/{{ page.source }}"
                                    title="Help improve this page">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -79,13 +79,20 @@
                                 </span>
                             </a>
                         </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/channel/{{ config.youtube.account }}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                     <p class="copyright text-muted">Copyright © {{ config.site.name }} 2015</p>
                 </div>
             </div>
         </div>
     </footer>
-
 </div>
 
 <!-- CDN -->

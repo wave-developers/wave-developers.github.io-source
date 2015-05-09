@@ -23,9 +23,30 @@ menus:
   - name: About
     url: /about.html
 
+# next event
+
+next:
+  loc:
+    lat: 42.453247
+    lng: 18.533930
+
 # Disqus configuration, comment these lines to disable it
+# Services
+
 disqus:
   shortname: wave-develoeprs-gh-page
+
+email:
+  account: wave.developers.team@gmail.com
+
+facebook:
+  account: Wave-Developers/547751192031667
+  groups:
+    en: 656571341153398
+    ru: ex.yu.developers
+
+github:
+  account: wave-developers
 
 google:
   analytics: UA-38043860-8 # Google analytics
@@ -34,19 +55,5 @@ google:
 twitter:
   account: hyzhak_en
 
-github:
-  account: wave-developers
-
-facebook:
-  account: Wave-Developers/547751192031667
-  groups:
-    en: 656571341153398
-    ru: ex.yu.developers
-
-email:
-  account: wave.developers.team@gmail.com
-
-next:
-  loc:
-    lat: 42.453247
-    lng: 18.533930
+youtube:
+  account: UCGu3STPtjYgKHz0g4DM9Evw
