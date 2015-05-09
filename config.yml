@@ -7,6 +7,7 @@ site:
   name: Wave Developers
   description: Wave developers meetup communitry
   build: dist
+  keywords: balkan,albania,bosnia and herzegovina,croatia,makedonia,montenegro,serbia,events,programming,java,javascript,python,ruby,c,angularjs,nodejs,ionj,startup,DIY
 
 # Main menu
 menus:
