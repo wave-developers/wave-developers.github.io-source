@@ -5,13 +5,34 @@ title: "Monte Developers Meetup #03"
 description: "Javascript"
 image: "/events/2015-05-30.jpg"
 
+speakers:
+    - name: Konstantin Baev
+      description: Kanban
+      photo: /assets/images/speakers/konstantin-baev.jpg
+    - name: Eugene Potapenko
+      description: опыт разработки проекта playphrasee.me - node.js + angular
+      photo: /assets/images/speakers/eugene-potapenko.jpg
+    - name: Eugene Krevenets
+      description: ES6 Now!
+
 source: "edit/master/pages/call.hbs"
 ---
 
 <article class="is-post container">
     <h1>Join us</h1>
-    <h2>TODO: Speakers</h2>
-    <h2>TODO: Location</h2>
+    <h2>Speakers</h2>
+    {{#each speakers}}
+        <h3>{{name}}</h3>
+        <p>
+            {{description}}
+        </p>
+        {{#if photo}}
+            <img src="{{photo}}" alt="{{name}}"/>
+        {{/if}}
+    {{/each}}
+    <br/>
+    <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Became a speaker (стать докладчиком)</a>
+    <h2>Location</h2>
     {{>next_event_map}}
     <h2>TODO: Time</h2>
     <h2>Checkin!</h2>
