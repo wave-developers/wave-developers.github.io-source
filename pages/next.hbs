@@ -22,13 +22,13 @@ source: "edit/master/pages/call.hbs"
     <h1>Join us</h1>
     <h2>Speakers</h2>
     {{#each speakers}}
+        {{#if photo}}
+            <img src="{{photo}}" alt="{{name}}"/>
+        {{/if}}
         <h3>{{name}}</h3>
         <p>
             {{description}}
         </p>
-        {{#if photo}}
-            <img src="{{photo}}" alt="{{name}}"/>
-        {{/if}}
     {{/each}}
     <br/>
     <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Became a speaker (стать докладчиком)</a>
