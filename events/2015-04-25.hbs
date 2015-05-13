@@ -9,7 +9,8 @@ image: "/events/2015-04-25.jpg"
 speakers:
     - name: Rodion Mamin
       photo: /assets/images/speakers/rodion-mamin.jpg
-    - name: Kirill Antoshin
+    - id: kirill-antoshin
+      name: Kirill Antoshin
       title: Путь Самурая - или как запустить проект в одиночку
       photo: /assets/images/speakers/kirill-antoshin.jpg
       contacts:
@@ -34,41 +35,49 @@ source: "edit/master/events/2015-04-25.md"
 <div>
 {{#each speakers}}
     <section>
-        <h3>{{name}}
+        <h3 id="{{id}}">{{name}}
             {{#if title}}
                 :: <small> {{title}}</small>
             {{/if}}
         </h3>
-        <div>
-            {{#if photo}}
-                <p>
-                    <img src="{{photo}}" width="128" height="128"/>
-                </p>
-            {{/if}}
+        <div class="row">
+            <div class="col-md-3 text-right">
+                {{#if photo}}
+                    <p>
+                        <img src="{{photo}}" width="128" height="128"/>
+                    </p>
+                {{/if}}
 
-            {{#if contacts}}
-                <p>
-                    {{#if contacts.slideshare}}
-                        <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
-                    {{/if}}
-                    {{#if contacts.email}}
-                        <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
-                    {{/if}}
-                </p>
-            {{/if}}
+                {{#if contacts}}
+                    <p>
+                        {{#if contacts.slideshare}}
+                            <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
+                        {{/if}}
+                        {{#if contacts.email}}
+                            <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
+                        {{/if}}
+                    </p>
+                {{/if}}
 
+            </div>
+            <div class="col-md-9">
             {{#if presentation}}
-                {{#if presentation.youtube}}
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/{{presentation.youtube.id}}" frameborder="0" allowfullscreen>
-                    </iframe>
-                {{/if}}
-                {{#if presentation.slideshare}}
-                    <iframe src="//www.slideshare.net/slideshow/embed_code/key/{{presentation.slideshare.id}}" width="640" height="534" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
-                    </iframe>
-                {{/if}}
+                <p>
+                    {{#if presentation.youtube}}
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/{{presentation.youtube.id}}" frameborder="0" allowfullscreen>
+                        </iframe>
+                    {{/if}}
+                    {{#if presentation.slideshare}}
+                        <iframe src="//www.slideshare.net/slideshow/embed_code/key/{{presentation.slideshare.id}}" width="640" height="534" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+                        </iframe>
+                    {{/if}}
+                </p>
             {{else}}
-                <i>video will be added soon</i>
+                <p>
+                    <i>video will be added soon</i>
+                </p>
             {{/if}}
+            </div>
         </div>
     </section>
     <hr/>
