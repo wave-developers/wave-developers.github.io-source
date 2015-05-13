@@ -19,7 +19,15 @@ module.exports = function(grunt) {
                 layoutdir: '<%= theme %>/layouts',
                 layout: 'default.hbs',
 
-                plugins: ['assemble-middleware-sitemap'],
+                plugins: [
+                    'assemble-middleware-rss',
+                    'assemble-middleware-sitemap'
+                ],
+
+                rss: {
+                    title: 'Wave Developers',
+                    description: 'Events, Videos, Presentations.'
+                },
 
                 sitemap: {
                     dest: '<%= config.site.build %>',

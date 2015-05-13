@@ -24,6 +24,7 @@
   "homepage": "https://github.com/wave-developers/wave-developers.github.io-source",
   "devDependencies": {
     "assemble": "^0.4.42",
+    "assemble-middleware-rss": "^0.2.5",
     "assemble-middleware-sitemap": "^0.2.5",
     "grunt": "^0.4.5",
     "grunt-bump": "^0.3.0",
