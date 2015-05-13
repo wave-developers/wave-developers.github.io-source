@@ -1,3 +1,5 @@
+@import "../../../node_modules/bootstrap/less/variables.less";
+
 .post-preview {
   .header-image {
     height: 200px;
@@ -8,4 +10,22 @@
 .join-us {
   white-space: initial;
   text-decoration: inherit;
+}
+
+.presentation-wide-media {
+  @media (max-width: @screen-sm-max) {
+    width:100%;
+  }
+  @media (min-width: @screen-sm-max) {
+    width:640px;
+  }
+}
+
+.speaker-block {
+  @media (max-width: @screen-sm-max) {
+    text-align: left;
+  }
+  @media (min-width: @screen-sm-max) {
+    text-align: right;
+  }
 }
