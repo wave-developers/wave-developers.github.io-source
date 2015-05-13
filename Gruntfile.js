@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             site: {
                 files: [
                     {
-                        '<%= config.site.build %>/events/': ['events/*.md']
+                        '<%= config.site.build %>/events/': ['events/*.hbs']
                     },
                     {
                         '<%= config.site.build %>/': ['pages/*.hbs']

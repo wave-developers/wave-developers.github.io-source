@@ -1,0 +1,80 @@
+---
+layout: event.hbs
+section: event
+
+title: "Monte Developers Meetup #02"
+description: "Startups"
+date: 2015-04-25
+image: "/events/2015-04-25.jpg"
+speakers:
+    - name: Rodion Mamin
+      photo: /assets/images/speakers/rodion-mamin.jpg
+    - name: Kirill Antoshin
+      title: Путь Самурая - или как запустить проект в одиночку
+      photo: /assets/images/speakers/kirill-antoshin.jpg
+      contacts:
+          slideshare: kirillkvanto
+          email: info@myrentacar.me
+      presentation:
+          slideshare:
+            id: CPxiw9zYFnshpV
+          youtube:
+            id: 8AaEGxyhugA
+    - name: Ivan Kukic
+      photo: /assets/images/speakers/ivan-kukic.jpg
+    - name: Alex Romanenko
+      photo: /assets/images/speakers/alex-romanenko.jpg
+
+source: "edit/master/events/2015-04-25.md"
+
+---
+
+<h2>Speakers</h2>
+
+<div>
+{{#each speakers}}
+    <section>
+        <h3>{{name}}
+            {{#if title}}
+                :: <small> {{title}}</small>
+            {{/if}}
+        </h3>
+        <div>
+            {{#if photo}}
+                <p>
+                    <img src="{{photo}}" width="128" height="128"/>
+                </p>
+            {{/if}}
+
+            {{#if contacts}}
+                <p>
+                    {{#if contacts.slideshare}}
+                        <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
+                    {{/if}}
+                    {{#if contacts.email}}
+                        <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
+                    {{/if}}
+                </p>
+            {{/if}}
+
+            {{#if presentation}}
+                {{#if presentation.youtube}}
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/{{presentation.youtube.id}}" frameborder="0" allowfullscreen>
+                    </iframe>
+                {{/if}}
+                {{#if presentation.slideshare}}
+                    <iframe src="//www.slideshare.net/slideshow/embed_code/key/{{presentation.slideshare.id}}" width="640" height="534" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+                    </iframe>
+                {{/if}}
+            {{else}}
+                <i>video will be added soon</i>
+            {{/if}}
+        </div>
+    </section>
+    <hr/>
+{{/each}}
+</div>
+
+# Photos
+
+[![](/events/2015-04-25-fb-photos.jpg)](https://www.facebook.com/media/set/?set=pcb.677403152388651&type=1)
