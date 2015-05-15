@@ -7,8 +7,18 @@ description: "Startups"
 date: 2015-04-25
 image: "/events/2015-04-25.jpg"
 speakers:
-    - name: Rodion Mamin
+    - id: rodion-mamin
+      name: Rodion Mamin
       photo: /assets/images/speakers/rodion-mamin.jpg
+      title: Using of Titanium for Startups (ru/eng)
+      contacts:
+          slideshare: rodionmamin
+          facebook: rodion.mamin
+      presentation:
+          slideshare:
+            id: zxH6nTbNI6eo6E
+          youtube:
+            id: qmYivUtYPA8
     - id: kirill-antoshin
       name: Kirill Antoshin
       title: Путь Самурая - или как запустить проект в одиночку
@@ -34,7 +44,6 @@ is_next_item_active: true
 
 <h2>Speakers</h2>
 
-<div>
 {{#each speakers}}
     <section>
         <h3 id="{{id}}">{{name}}
@@ -54,6 +63,9 @@ is_next_item_active: true
                     <p>
                         {{#if contacts.slideshare}}
                             <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
+                        {{/if}}
+                        {{#if contacts.facebook}}
+                            <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
                         {{/if}}
                         {{#if contacts.email}}
                             <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
@@ -84,7 +96,6 @@ is_next_item_active: true
     </section>
     <hr/>
 {{/each}}
-</div>
 
 <section>
     <h1>
