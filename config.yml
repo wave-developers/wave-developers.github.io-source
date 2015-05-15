@@ -11,16 +11,21 @@ site:
 
 # Main menu
 menus:
-  - name: Next Event
+  - id: next
+    active: true
+    name: Next Event
     url: /next.html
 
-  - name: Call 4 Speakers
+  - id: call
+    name: Call 4 Speakers
     url: /call.html
 
-  - name: Support Us
+  - id: support
+    name: Support Us
     url: /support.html
 
-  - name: About
+  - id: about
+    name: About
     url: /about.html
 
 # next event

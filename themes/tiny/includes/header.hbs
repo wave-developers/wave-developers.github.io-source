@@ -14,10 +14,17 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+
+        <ul class="nav navbar-nav navbar-right">
                 {{#each config.menus}}
                 <li>
-                    <a href="{{ url }}">{{ name }}</a>
+                    {{#is ../basename id}}
+                        <span>{{ name }}</span>
+                    {{else}}
+                        <a href="{{ url }}" {{#if ../../is_next_item_active}}{{#if active}}class="btn btn-danger"{{/if}}{{/if}}>
+                            {{ name }}
+                        </a>
+                    {{/is}}
                 </li>
                 {{/each}}
             </ul>
