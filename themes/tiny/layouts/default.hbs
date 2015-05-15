@@ -33,6 +33,13 @@
                 </div>
             </div>
         </div>
+        <div style="position:absolute;bottom:8px;right:8px">
+            {{#if show_next}}
+                <span class="hidden-xs hidden-sm">
+                    <a class="btn btn-danger btn-sm" href="/next.html"><small>Future Event</small> <i class="fa fa-rocket"></i></a>
+                </span>
+            {{/if}}
+        </div>
     </header>
 
     {{> body }}

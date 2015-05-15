@@ -11,14 +11,14 @@ site:
 
 # Main menu
 menus:
+  - name: Next Event
+    url: /next.html
+
   - name: Call 4 Speakers
     url: /call.html
 
   - name: Support Us
     url: /support.html
-
-  - name: Contact
-    url: /contact.html
 
   - name: About
     url: /about.html
@@ -42,8 +42,12 @@ email:
 facebook:
   account: Wave-Developers/547751192031667
   groups:
-    en: 656571341153398
-    ru: ex.yu.developers
+    en:
+      id: 656571341153398
+      title: English speaking group
+    ru:
+      id: ex.yu.developers
+      title: Русскоговорящая группа
 
 github:
   account: wave-developers

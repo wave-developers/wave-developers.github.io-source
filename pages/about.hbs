@@ -11,23 +11,28 @@ source: "edit/master/pages/about.hbs"
 ---
 
 <article class="text-center container">
-    <h1>We are</h1>
-    <p>
-        It's group of passionate geeks that lives near the sea.
-        We like create useful thinks, cool websites, mobile apps, robots and many other things.
-        And finally organize events, when we share our knowledge.
-    </p>
-    <h1>Join Us</h1>
-    <p>
-        <i class="fa fa-facebook-official"></i> English speaking group on <a href="https://www.facebook.com/groups/{{ config.facebook.groups.en }}">IT Dev Group of Balkans</a>
-    </p>
-    <p>
-        <i class="fa fa-facebook-official"></i> для русскоговорщих <a href="https://www.facebook.com/groups/{{ config.facebook.groups.ru }}">Software Developers of Balkan</a>
-    </p>
-    <p>
-        <i class="fa fa-facebook-official"></i> follow us in <a href="https://www.facebook.com/pages/{{ config.facebook.account }}">Wave developers organization</a>
-    </p>
-    <p>
-        <i class="fa fa-youtube"></i> videos from events on <a href="https://www.youtube.com/channel/{{ config.youtube.account }}">Wave developers youtube channel</a>
-    </p>
+    <section>
+        <h1>We are</h1>
+        <p>
+            It's group of passionate geeks that lives near the sea.
+            We like create useful thinks, cool websites, mobile apps, robots and many other things.
+            And finally organize events, when we share our knowledge.
+        </p>
+    </section>
+    <section>
+        <h1>Contacts</h1>
+        <h2><i class="fa fa-envelope-square"></i> Email</h2>
+        <a target="_blank" href="mailto:{{ config.email.account }}">{{ config.email.account }}</a>
+        <h2><i class="fa fa-facebook-official"></i> Facebook</h2>
+        <a target="_blank" href="http://facebook.com/pages/{{ config.facebook.account }}/">facebook.com/pages/{{ config.facebook.account }}</a><br/>
+        {{#each config.facebook.groups}}
+            <a target="_blank" href="http://facebook.com/groups/{{ id }}/">{{ title }}</a><br/>
+        {{/each}}
+        <h2><i class="fa fa-github-square"></i> Github</h2>
+        <a target="_blank" href="http://github.com/{{ config.github.account }}/">github.com/{{ config.github.account }}</a>
+        <h2><i class="fa fa-twitter-square"></i> Twitter</h2>
+        <a target="_blank" href="http://twitter.com/{{ config.twitter.account }}/">twitter.com/{{ config.twitter.account }}</a>
+        <h2><i class="fa fa-youtube-square"></i> Youtube</h2>
+        <a target="_blank" href="https://www.youtube.com/channel/{{ config.youtube.account }}/">Video from events</a>
+    </section>
 </article>
