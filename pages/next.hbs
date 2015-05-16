@@ -8,7 +8,6 @@ image: "/events/2015-05-30.jpg"
 speakers:
     - id: eugene-potapenko
       name: Eugene Potapenko
-      photo: /assets/images/speakers/eugene-potapenko.jpg
       description:
           - text: Share experience of developming playphrase.me with node.js and angular.js.
             locale: en
@@ -16,7 +15,6 @@ speakers:
             locale: ru
     - id: konstantin-baev
       name: Konstantin Baev
-      photo: /assets/images/speakers/konstantin-baev.jpg
       contacts:
           site: http://kbaev.ru
           github: kipruss
@@ -52,9 +50,9 @@ source: "edit/master/pages/call.hbs"
             </div>
             <div class="row">
                 <div class="col-md-3 speaker-block">
-                    {{#if photo}}
+                    {{#if id}}
                         <p>
-                            <img src="{{photo}}" width="128" height="128"/>
+                            <img src="/assets/images/speakers/{{id}}.jpg" width="128" height="128" title="{{name}}"/>
                         </p>
                     {{/if}}
 
