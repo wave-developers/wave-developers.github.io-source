@@ -6,34 +6,107 @@ description: "Javascript"
 image: "/events/2015-05-30.jpg"
 
 speakers:
-    - name: Konstantin Baev
-      description: Kanban
-      photo: /assets/images/speakers/konstantin-baev.jpg
-    - name: Eugene Potapenko
-      description: опыт разработки проекта playphrasee.me - node.js + angular
+    - id: eugene-potapenko
+      name: Eugene Potapenko
       photo: /assets/images/speakers/eugene-potapenko.jpg
-    - name: Eugene Krevenets
-      description: ES6 Now!
+      description:
+          - text: Опыт разработки проекта playphrasee.me - node.js + angular
+            locale: ru
+    - id: konstantin-baev
+      name: Konstantin Baev
+      photo: /assets/images/speakers/konstantin-baev.jpg
+      description:
+          - text: I will talk about Kanban - method of flexible management of processes, survey realizations of Kanban board and introduce Kanbanchi - one of realizations, where I take part as developer
+            locale: en
+          - text: Я буду говорить о Канбане - методологии гибкого управления задачами, сделаю обзор программных реализаций доски Канбан, представление Kanbanchi - одной из таких реализаций, в разработке которой я принимаю участие.
+            locale: ru
+    - name: Vasily Gennadich
+      description:
+          - text: Using parse.com in beta application.
+            locale: eng
+          - text: Использование parse.com на примере беты приложения.
+            locale: ru
 
 source: "edit/master/pages/call.hbs"
 ---
 
 <article class="is-post container">
-    <h1>Join us</h1>
-    <h2>Speakers</h2>
-    {{#each speakers}}
-        {{#if photo}}
-            <img src="{{photo}}" alt="{{name}}"/>
-        {{/if}}
-        <h3>{{name}}</h3>
+    <h1>Future event <small>30 May 2015</small></h1>
+    <sections id="speakers">
+        <h2>Speakers</h2>
+        {{#each speakers}}
+            <div class="row">
+                <div class="col-md-3 speaker-block">
+                    <h3 id="{{id}}">{{name}}
+                        {{#if title}}
+                            :: <small> {{title}}</small>
+                        {{/if}}
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 speaker-block">
+                    {{#if photo}}
+                        <p>
+                            <img src="{{photo}}" width="128" height="128"/>
+                        </p>
+                    {{/if}}
+
+                    {{#if contacts}}
+                        <p>
+                            {{#if contacts.slideshare}}
+                                <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
+                            {{/if}}
+                            {{#if contacts.facebook}}
+                                <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
+                            {{/if}}
+                            {{#if contacts.email}}
+                                <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
+                            {{/if}}
+                        </p>
+                    {{/if}}
+                </div>
+                <div class="col-md-9">
+                    {{#each description}}
+                        <p>
+                            {{text}}
+                        </p>
+                    {{/each}}
+                </div>
+            </div>
+            {{#draft}}
+                {{#if photo}}
+                    <img src="{{photo}}" alt="{{name}}"/>
+                {{/if}}
+                <h3>{{name}}</h3>
+                {{#each description}}
+                    <p>
+                        {{text}}
+                    </p>
+                {{/each}}
+            {{/draft}}
+        {{/each}}
+        <br/>
+        <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Became a speaker (стать докладчиком)</a>
+    </sections>
+    <hr/>
+    <section id="place">
+        <h2>Place</h2>
+        {{>next_event_map}}
+    </section>
+    <hr/>
+    <section id="time">
+        <h2>Time</h2>
+        <p>30 May 2019</p>
+    </section>
+    <hr/>
+    <section id="join">
+        <h2>Join Us</h2>
         <p>
-            {{description}}
+            <a href="/about.html#contacts">Contacts</a>
         </p>
-    {{/each}}
-    <br/>
-    <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Became a speaker (стать докладчиком)</a>
-    <h2>Location</h2>
-    {{>next_event_map}}
-    <h2>TODO: Time</h2>
-    <h2>Checkin!</h2>
+        <p>
+            TODO: Add Facebook, Google Calendar, Lanyrd, Meetup event
+        </p>
+    </section>
 </article>
