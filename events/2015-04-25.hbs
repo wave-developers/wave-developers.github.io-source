@@ -31,8 +31,13 @@ speakers:
             id: CPxiw9zYFnshpV
           youtube:
             id: 8AaEGxyhugA
-    - name: Ivan Kukic
+    - id: ivan-kukic
+      name: Ivan Kukic
       photo: /assets/images/speakers/ivan-kukic.jpg
+      description: Ivan Kukic do a pitch about his project bookme-montenegro.com. Is it tourism oriented project. Provide services - renting apartments, cars, etc in Montenegro.
+      presentation:
+          youtube:
+            id: 07iNc1Yy8Us
     - name: Alex Romanenko
       photo: /assets/images/speakers/alex-romanenko.jpg
 
@@ -58,6 +63,8 @@ is_next_item_active: true
                         <img src="{{photo}}" width="128" height="128"/>
                     </p>
                 {{/if}}
+
+                <p>{{description}}</p>
 
                 {{#if contacts}}
                     <p>
