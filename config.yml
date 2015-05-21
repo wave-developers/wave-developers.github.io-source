@@ -32,8 +32,8 @@ menus:
 
 next:
   loc:
-    lat: 42.453247
-    lng: 18.533930
+    lat: 42.453284
+    lng: 18.539527
 
 # Disqus configuration, comment these lines to disable it
 # Services

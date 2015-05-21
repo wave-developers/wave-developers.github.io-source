@@ -4,8 +4,9 @@
 <script type="text/javascript">
     function initialize() {
         var mapOptions = {
-            center: { lat: 42.2040553, lng: 18.9458102},
-            zoom: 9,
+            //center: { lat: 42.2040553, lng: 18.9458102},
+            center: { lat: {{ config.next.loc.lat }}, lng: {{ config.next.loc.lng }} },
+            zoom: 12,
             scrollwheel: false
         };
 
@@ -43,3 +44,6 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <section id="map" style="height: 450px"></section>
+<section>
+    Coordinates: <i class="fa fa-map-marker"></i> {{ config.next.loc.lat }}, {{ config.next.loc.lng }}. <a target="_blank" href="https://www.openstreetmap.org/?mlat={{ config.next.loc.lat }}&mlon={{ config.next.loc.lng }}#map=19/{{ config.next.loc.lat }}/{{ config.next.loc.lng }}">Open Street Map</a>
+</section>
