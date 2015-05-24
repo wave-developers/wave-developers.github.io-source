@@ -72,6 +72,16 @@ module.exports = function(grunt) {
                         dest: '<%= config.site.build %>'
                     }
                 ]
+            },
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= theme %>',
+                        src: 'js/**/*',
+                        dest: '<%= config.site.build %>/'
+                    }
+                ]
             }
         },
         'gh-pages': {
