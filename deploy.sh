@@ -1,4 +1,8 @@
 #!/bin/sh
+
+#looking around
+ls
+
 # go to the out directory and create a *new* Git repo
 cd dist
 git init
