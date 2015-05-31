@@ -4,7 +4,8 @@
   "description": "wave developers source for assemble.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "grunt build",
+    "test": "echo \"Doesn't have tests yet!\""
   },
   "repository": {
     "type": "git",
