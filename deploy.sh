@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# This sets two options for the shell to make the script more reliable:
+set -o errexit -o nounset
+
 COMMIT_MESAGE="$(git log -1 --pretty=%B)"
 
 # go to the out directory and create a *new* Git repo
@@ -9,6 +12,10 @@ git init
 # inside this git repo we'll pretend to be a new user
 git config user.name "Travis CI"
 git config user.email "ievgenii.krevenets@gmail.com"
+
+git remote add upstream "https://${GH_TOKEN}@${GH_REF}"
+git fetch upstream
+git reset upstream/master
 
 # The first and only commit to this new Git repo contains all the
 # files present with the commit message "Deploy to GitHub Pages".
