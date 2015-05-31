@@ -1,6 +1,6 @@
 #!/bin/sh
 
-COMMIT_MESAGE = "$(git log -1 --pretty=%B)"
+COMMIT_MESAGE="$(git log -1 --pretty=%B)"
 
 # go to the out directory and create a *new* Git repo
 cd dist
