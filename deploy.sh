@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#based on this one
+#https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
+#and that
+#http://www.steveklabnik.com/automatically_update_github_pages_with_travis_example/
+
 # This sets two options for the shell to make the script more reliable:
 set -o errexit -o nounset
 
