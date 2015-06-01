@@ -5,6 +5,7 @@ layout: default.hbs
 <article class="container">
     <header class="page-header">
         <h2>{{ title }} :: <small>{{ description }}</small></h2>
+        <small>on <span class="month">{{ formatDate date "%b"}}</span> <span class="day">{{ formatDate date "%d"}}</span><span class="year">, {{ formatDate date "%Y"}}</span></small>
     </header>
 
     <div>

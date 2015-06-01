@@ -1,14 +1,39 @@
 ---
-layout: default.hbs
+layout: event.hbs
+section: event
 
-title: "Monte Developers Meetup #04"
-description: "?"
+title: "Monte Developers Meetup #03"
+description: "Javascript"
+date: 2015-05-30
+image: "/events/2015-05-30.jpg"
 
-source: "edit/master/pages/next.hbs"
+speakers:
+    - id: eugene-potapenko
+      name: Eugene Potapenko
+      contacts:
+          site: http://playphrase.me
+      description:
+          - text: will share his experience of developming playphrase.me with node.js and angular.js.
+            locale: en
+          - text: опыт разработки проекта playphrase.me - node.js + angular
+            locale: ru
+    - id: konstantin-baev
+      name: Konstantin Baev
+      contacts:
+          site: http://kbaev.ru
+          github: kipruss
+      description:
+          - text: will talk about Kanban - method of flexible management of processes, survey realizations of Kanban board and introduce Kanbanchi - one of realizations, where he takes part as a developer
+            locale: en
+          - text: о Канбане, методологии гибкого управления задачами. Обзор программных реализаций доски Канбан, а так же Kanbanchi - в разработке которой принимает участие
+            locale: ru
+
+source: "edit/master/events/2015-05-30.hbs"
+
+is_next_item_active: true
 ---
 
 <article class="is-post container">
-    <h1>Future event <small>June 2015</small></h1>
     <sections id="speakers">
         <h2>Speakers</h2>
         {{#each speakers}}
@@ -57,54 +82,17 @@ source: "edit/master/pages/next.hbs"
                     {{/each}}
                 </div>
             </div>
-            {{#draft}}
-                {{#if photo}}
-                    <img src="{{photo}}" alt="{{name}}"/>
-                {{/if}}
-                <h3>{{name}}</h3>
-                {{#each description}}
-                    <p>
-                        {{text}}
-                    </p>
-                {{/each}}
-            {{/draft}}
         {{/each}}
-        <br/>
-        <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Became a speaker (стать докладчиком)</a>
     </sections>
     <hr/>
     <section id="place">
         <h2>Place</h2>
-        {{>next_event_map}}
-        <h3>Address</h3>
-        <p>{{config.next.loc.name}}</p>
-    </section>
-    <hr/>
-    <section id="time">
-        <h2>Date & Time</h2>
-        <p>{{config.next.when}}</p>
-    </section>
-    <hr/>
-    <section id="join">
-        <h2>Join Us On</h2>
-        <div>
-            <!--
-            <a href="http://www.meetup.com/Monte-Dev-Meetup/events/222683979/" target="_blank">
-                <img src="/assets/images/social/meetup.jpg" alt="meetup" width="64" height="64"/>
-            </a>
-            <a href="http://lanyrd.com/2015/montedevmeetup/" target="_blank">
-                <img src="/assets/images/social/lanyrd.jpg" alt="lanyrd" width="64" height="64"/>
-            </a>
-            <a href="https://www.facebook.com/events/926676357373901/" target="_blank">
-                <img src="/assets/images/social/facebook.jpg" alt="facebook" width="64" height="64"/>
-            </a>
-            <a href="https://www.google.com/calendar/event?action=TEMPLATE&tmeid=OTN2b3JuNmIybjg5MDg1c2U5MTBvb2g2Zm8gaHl6aGFrYUBt&tmsrc=hyzhaka%40gmail.com" target="_blank">
-                <img src="/assets/images/social/google-calendar.jpg" alt="google calendar" width="64" height="64"/>
-            </a>
-            -->
-        </div>
         <p>
-            <a href="/about.html#contacts">Contacts Us</a>
+            <a href="https://www.facebook.com/russkult/">Russian Cultural Centre named after the count Sava Vladislavich</a>
+        </p>
+        <p>
+            Manastirska 2, Herceg Novi, Montenegro
         </p>
     </section>
+    <hr/>
 </article>

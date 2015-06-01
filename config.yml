@@ -31,9 +31,12 @@ menus:
 # next event
 
 next:
+  when: the end of june
   loc:
-    lat: 42.453284
-    lng: 18.539527
+    name: Bar, Montenegro
+    lat: 42.10
+    lng: 19.10
+    zoom: 11
 
 # Disqus configuration, comment these lines to disable it
 # Services
