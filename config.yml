@@ -9,6 +9,10 @@ site:
   build: dist
   keywords: balkan,albania,bosnia and herzegovina,croatia,makedonia,montenegro,serbia,events,programming,java,javascript,python,ruby,c,angularjs,nodejs,ionj,startup,DIY
 
+author:
+  name: Eugene Krevenets
+  url: http://hyzhak.github.io
+
 # Main menu
 menus:
   - id: next
