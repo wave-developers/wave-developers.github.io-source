@@ -9,7 +9,123 @@ layout: default.hbs
     </header>
 
     <div>
-        {{> body }}
+        <article class="is-post container">
+            {{#if speakers}}
+                <h2>Speakers</h2>
+            {{/if}}
+
+            {{#each speakers}}
+                <section>
+                    <h3 id="{{id}}">{{name}}
+                        {{#if title}}
+                            :: <small> {{title}}</small>
+                        {{/if}}
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-3 speaker-block">
+                            <p>
+                                {{#if photo}}
+                                    <img src="{{photo}}" width="128" height="128" title="{{name}}"/>
+                                {{else}}
+                                    <img src="/assets/images/speakers/{{id}}.jpg" width="128" height="128" title="{{name}}"/>
+                                {{/if}}
+                            </p>
+
+                            {{#if contacts}}
+                                <p>
+                                    {{#if contacts.slideshare}}
+                                        <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
+                                    {{/if}}
+                                    {{#if contacts.facebook}}
+                                        <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
+                                    {{/if}}
+                                    {{#if contacts.github}}
+                                        <a target="_blank" href="https://www.github.com/{{contacts.github}}"><i class="fa fa-github"></i></a>
+                                    {{/if}}
+                                    {{#if contacts.email}}
+                                        <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
+                                    {{/if}}
+                                    {{#if contacts.site}}
+                                        <a target="_blank" href="{{contacts.site}}"><i class="fa fa-user"></i></a>
+                                    {{/if}}
+                                </p>
+                            {{/if}}
+
+                            {{#if presentation}}
+                                <small>
+                                    {{> all_locals text=description}}
+                                </small>
+                            {{/if}}
+                        </div>
+                        <div class="col-md-9">
+                            {{#if presentation}}
+                                <p>
+                                    {{#if presentation.youtube}}
+                                        <iframe class="presentation-wide-media" width="640" height="360" src="https://www.youtube.com/embed/{{presentation.youtube.id}}" frameborder="0" allowfullscreen>
+                                        </iframe>
+                                    {{/if}}
+                                    {{#if presentation.slideshare}}
+                                        <iframe class="presentation-wide-media" src="//www.slideshare.net/slideshow/embed_code/key/{{presentation.slideshare.id}}" width="640" height="360" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+                                        </iframe>
+                                    {{/if}}
+                                </p>
+                            {{else}}
+                                {{> all_locals text=description}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </section>
+                <hr/>
+            {{/each}}
+
+            {{#if photos}}
+                <section id="photos">
+                    <h2>
+                        Photos
+                    </h2>
+
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-9">
+                            <a href="https://www.facebook.com/media/set/?set={{photos.fb.set}}">
+                                <img class="presentation-wide-media" src="/events/{{basename}}-fb-photos.jpg" alt="photos of this event"/>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            {{/if}}
+            {{#if place}}
+                <section id="place">
+                    <h2>Place</h2>
+                    <p>
+                        <a href="{{place.url}}" target="_blank">{{place.name}}</a>
+                    </p>
+                    <p>
+                        {{place.address}}
+                    </p>
+                </section>
+            {{/if}}
+            {{#if contributors}}
+                <section id="place">
+                    <h2>Contributors</h2>
+                    <p>Big thanks for guys that helps organizing this event!
+                        <br/>
+                        Their contribution makes this event.</p>
+                    {{#each contributors}}
+                        <div style="float: left;width: 140px" class="text-center">
+                            <a href="{{url}}" target="_blank">
+                                <img src="/assets/images/speakers/{{id}}.jpg" alt="{{name}}"
+                                     class="img-rounded"
+                                        width="128" height="128"/>
+                                <br/>
+                                <small>
+                                    {{name}}
+                                </small>
+                            </a>
+                        </div>
+                    {{/each}}
+                </section>
+            {{/if}}
+        </article>
 
         {{> disqus_thread }}
     </div>

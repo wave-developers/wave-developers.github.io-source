@@ -9,7 +9,6 @@ image: "/events/2015-04-25.jpg"
 speakers:
     - id: rodion-mamin
       name: Rodion Mamin
-      photo: /assets/images/speakers/rodion-mamin.jpg
       title: Using of Titanium for Startups (ru/eng)
       contacts:
           slideshare: rodionmamin
@@ -22,7 +21,6 @@ speakers:
     - id: kirill-antoshin
       name: Kirill Antoshin
       title: Путь Самурая - или как запустить проект в одиночку
-      photo: /assets/images/speakers/kirill-antoshin.jpg
       contacts:
           slideshare: kirillkvanto
           email: info@myrentacar.me
@@ -34,7 +32,6 @@ speakers:
     - id: ivan-kukic
       name: Ivan Kukic
       title: Bookme-Montenegro.com
-      photo: /assets/images/speakers/ivan-kukic.jpg
       description: Ivan Kukic do a pitch about his project bookme-montenegro.com. Is it tourism oriented project. Provide services - renting apartments, cars, etc in Montenegro.
       presentation:
           youtube:
@@ -42,85 +39,16 @@ speakers:
     - id: alex-romanenko
       name: Alex Romanenko
       title: 2for1.pro
-      photo: /assets/images/speakers/alex-romanenko.jpg
       description: About launching startups and 2for1.pro project
       presentation:
           youtube:
             id: JZAKLy9U_i8
 
+photos:
+  fb:
+    set: pcb.677403152388651&type=1
+
 source: "edit/master/events/2015-04-25.md"
 
 is_next_item_active: true
-
 ---
-
-<h2>Speakers</h2>
-
-{{#each speakers}}
-    <section>
-        <h3 id="{{id}}">{{name}}
-            {{#if title}}
-                :: <small> {{title}}</small>
-            {{/if}}
-        </h3>
-        <div class="row">
-            <div class="col-md-3 speaker-block">
-                {{#if photo}}
-                    <p>
-                        <img src="{{photo}}" width="128" height="128"/>
-                    </p>
-                {{/if}}
-
-                <p>{{description}}</p>
-
-                {{#if contacts}}
-                    <p>
-                        {{#if contacts.slideshare}}
-                            <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
-                        {{/if}}
-                        {{#if contacts.facebook}}
-                            <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
-                        {{/if}}
-                        {{#if contacts.email}}
-                            <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
-                        {{/if}}
-                    </p>
-                {{/if}}
-
-            </div>
-            <div class="col-md-9">
-            {{#if presentation}}
-                <p>
-                    {{#if presentation.youtube}}
-                        <iframe class="presentation-wide-media" width="640" height="360" src="https://www.youtube.com/embed/{{presentation.youtube.id}}" frameborder="0" allowfullscreen>
-                        </iframe>
-                    {{/if}}
-                    {{#if presentation.slideshare}}
-                        <iframe class="presentation-wide-media" src="//www.slideshare.net/slideshow/embed_code/key/{{presentation.slideshare.id}}" width="640" height="534" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
-                        </iframe>
-                    {{/if}}
-                </p>
-            {{else}}
-                <p>
-                    <i>video will be added soon</i>
-                </p>
-            {{/if}}
-            </div>
-        </div>
-    </section>
-    <hr/>
-{{/each}}
-
-<section>
-    <h1>
-        Photos
-    </h1>
-
-    <div class="row">
-        <div class="col-md-offset-3 col-md-9">
-            <a href="https://www.facebook.com/media/set/?set=pcb.677403152388651&type=1">
-                <img class="presentation-wide-media" src="/events/2015-04-25-fb-photos.jpg" alt="photos of this event"/>
-            </a>
-        </div>
-    </div>
-</section>

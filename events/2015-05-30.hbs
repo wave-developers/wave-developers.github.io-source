@@ -3,7 +3,7 @@ layout: event.hbs
 section: event
 
 title: "Monte Developers Meetup #03"
-description: "Javascript"
+description: "Kanban & Javascript"
 date: 2015-05-30
 image: "/events/2015-05-30.jpg"
 
@@ -17,8 +17,10 @@ speakers:
             locale: en
           - text: опыт разработки проекта playphrase.me - node.js + angular
             locale: ru
+
     - id: konstantin-baev
       name: Konstantin Baev
+      title: Kanban — a method of a flexible task management and its realizations
       contacts:
           site: http://kbaev.ru
           github: kipruss
@@ -27,72 +29,27 @@ speakers:
             locale: en
           - text: о Канбане, методологии гибкого управления задачами. Обзор программных реализаций доски Канбан, а так же Kanbanchi - в разработке которой принимает участие
             locale: ru
+      presentation:
+          slideshare:
+              id: c7sp2F3b9lwwHx
+          youtube:
+              id: RJENRBdXZzI
+
+place:
+    address: Manastirska 2, Herceg Novi, Montenegro
+    name: Russian Cultural Centre named after the count Sava Vladislavich
+    url: https://www.facebook.com/russkult/
+
+contributors:
+    - id: sergey-krasnozhon
+      name: Sergey Krasnozhon
+      url: https://www.facebook.com/profile.php?id=100001914609046
+
+    - id: evgen-popov
+      name: Evgen Popov
+      url: https://www.facebook.com/danila.pomidorov
 
 source: "edit/master/events/2015-05-30.hbs"
 
 is_next_item_active: true
 ---
-
-<article class="is-post container">
-    <sections id="speakers">
-        <h2>Speakers</h2>
-        {{#each speakers}}
-            <div class="row">
-                <div class="col-md-3 speaker-block">
-                    <h3 id="{{id}}">{{name}}
-                        {{#if title}}
-                            :: <small> {{title}}</small>
-                        {{/if}}
-                    </h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 speaker-block">
-                    {{#if id}}
-                        <p>
-                            <img src="/assets/images/speakers/{{id}}.jpg" width="128" height="128" title="{{name}}"/>
-                        </p>
-                    {{/if}}
-
-                    {{#if contacts}}
-                        <p>
-                            {{#if contacts.slideshare}}
-                                <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
-                            {{/if}}
-                            {{#if contacts.facebook}}
-                                <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
-                            {{/if}}
-                            {{#if contacts.github}}
-                                <a target="_blank" href="https://www.github.com/{{contacts.github}}"><i class="fa fa-github"></i></a>
-                            {{/if}}
-                            {{#if contacts.email}}
-                                <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
-                            {{/if}}
-                            {{#if contacts.site}}
-                                <a target="_blank" href="{{contacts.site}}"><i class="fa fa-user"></i></a>
-                            {{/if}}
-                        </p>
-                    {{/if}}
-                </div>
-                <div class="col-md-9">
-                    {{#each description}}
-                        <p>
-                            {{text}}
-                        </p>
-                    {{/each}}
-                </div>
-            </div>
-        {{/each}}
-    </sections>
-    <hr/>
-    <section id="place">
-        <h2>Place</h2>
-        <p>
-            <a href="https://www.facebook.com/russkult/">Russian Cultural Centre named after the count Sava Vladislavich</a>
-        </p>
-        <p>
-            Manastirska 2, Herceg Novi, Montenegro
-        </p>
-    </section>
-    <hr/>
-</article>
