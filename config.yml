@@ -35,7 +35,7 @@ menus:
 # next event
 
 next:
-  when: the end of june
+  when: july 11th
   loc:
     name: Bar, Montenegro
     lat: 42.10
