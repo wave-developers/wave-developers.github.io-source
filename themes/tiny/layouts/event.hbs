@@ -52,9 +52,11 @@ layout: default.hbs
                             {{/if}}
 
                             {{#if presentation}}
-                                <small>
-                                    {{> all_locals text=description}}
-                                </small>
+                                {{#if description}}
+                                    <small>
+                                        {{> all_locals text=description}}
+                                    </small>
+                                {{/if}}
                             {{/if}}
                         </div>
                         <div class="col-md-9">
@@ -70,7 +72,9 @@ layout: default.hbs
                                     {{/if}}
                                 </p>
                             {{else}}
-                                {{> all_locals text=description}}
+                                {{#if description}}
+                                    {{> all_locals text=description}}
+                                {{/if}}
                             {{/if}}
                         </div>
                     </div>
