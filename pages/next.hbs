@@ -2,7 +2,37 @@
 layout: default.hbs
 
 title: "Monte Developers Meetup #04"
-description: "?"
+description: "Internet Of Things (IoT)"
+
+speakers:
+    - id: alex-pazhyn
+      name: Alex Pazhyn
+      about:
+          - text: UI designer in Ciklum Interactive, Ukraine. Over 5 years of experience in design. Started the career path in identity and printing, and then switched to web and mobile apps.
+            locale: en
+      description:
+          - text: >
+                <p>
+                    Designing for Internet of things:
+                </p>
+                <ul>
+                    <li>What’s the IOT means and how it works</li>
+                    <li>What UI are exist for IOT and how to design for IOT</li>
+                    <li>Future Interfaces and best cases for today</li>
+                </ul>
+
+    - id: konstantin-mirin
+      name: Konstantin Mirin
+      about:
+          - text: 12 years of coding, 5 years being CEO. Enjoy working with edge technologies and see good niche in Internet Of Things and energy saving solutions
+            locale: en
+          - text: 12 лет кодинга, 5 лет в роли CEO. Нравится работать с последними технологиями и вижу отличную нишу в области Интернета Вещей и энергосберегающих технологий.
+            locale: ru
+      description:
+          - text: How to schedule lighting intensity using from smartphone? Have you ever seem Philips Hue? Lifx? Marlight? Ever wanted to created it yourself? We’ll go through our approach where we create lighting solution for halls with two hundred light arrays.
+            locale: en
+          - text: Как регулируют освещенность с телефона по расписанию? Видели ли Philips Hue? Lifx? Marlight? Хотели ли сделать такое самостоятельно? Я расскажу, как мы делаем систему для освещения выставочных залов с двумя сотнями осветительных блоков.
+            locale: ru
 
 source: "edit/master/pages/next.hbs"
 ---
@@ -29,32 +59,10 @@ source: "edit/master/pages/next.hbs"
                         </p>
                     {{/if}}
 
-                    {{#if contacts}}
-                        <p>
-                            {{#if contacts.slideshare}}
-                                <a target="_blank" href="http://www.slideshare.net/{{contacts.slideshare}}"><i class="fa fa-slideshare"></i></a>
-                            {{/if}}
-                            {{#if contacts.facebook}}
-                                <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
-                            {{/if}}
-                            {{#if contacts.github}}
-                                <a target="_blank" href="https://www.github.com/{{contacts.github}}"><i class="fa fa-github"></i></a>
-                            {{/if}}
-                            {{#if contacts.email}}
-                                <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
-                            {{/if}}
-                            {{#if contacts.site}}
-                                <a target="_blank" href="{{contacts.site}}"><i class="fa fa-user"></i></a>
-                            {{/if}}
-                        </p>
-                    {{/if}}
+                    {{>contacts}}
                 </div>
                 <div class="col-md-9">
-                    {{#each description}}
-                        <p>
-                            {{text}}
-                        </p>
-                    {{/each}}
+                    {{>all_locales text=description}}
                 </div>
             </div>
             {{#draft}}
@@ -62,11 +70,7 @@ source: "edit/master/pages/next.hbs"
                     <img src="{{photo}}" alt="{{name}}"/>
                 {{/if}}
                 <h3>{{name}}</h3>
-                {{#each description}}
-                    <p>
-                        {{text}}
-                    </p>
-                {{/each}}
+                {{>all_locales text=description}}
             {{/draft}}
         {{/each}}
         <br/>
