@@ -54,7 +54,7 @@ layout: default.hbs
                             {{#if presentation}}
                                 {{#if description}}
                                     <small>
-                                        {{> all_locales text=description}}
+                                        {{> all_locales description}}
                                     </small>
                                 {{/if}}
                             {{/if}}
@@ -73,7 +73,7 @@ layout: default.hbs
                                 </p>
                             {{else}}
                                 {{#if description}}
-                                    {{> all_locales text=description}}
+                                    {{> all_locales description}}
                                 {{/if}}
                             {{/if}}
                         </div>

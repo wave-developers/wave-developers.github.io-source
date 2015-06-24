@@ -62,7 +62,7 @@ source: "edit/master/pages/next.hbs"
                     {{>contacts}}
                 </div>
                 <div class="col-md-9">
-                    {{>all_locales text=description}}
+                    {{>all_locales description}}
                 </div>
             </div>
             {{#draft}}
@@ -70,7 +70,7 @@ source: "edit/master/pages/next.hbs"
                     <img src="{{photo}}" alt="{{name}}"/>
                 {{/if}}
                 <h3>{{name}}</h3>
-                {{>all_locales text=description}}
+                {{>all_locales description}}
             {{/draft}}
         {{/each}}
         <br/>
