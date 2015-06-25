@@ -37,11 +37,13 @@
 
     {{> body }}
 
-    <div class="container">
-        {{> facebook_like }}
-    </div>
+    <section id="fb-like" class="bg-dark wide-breaker text-center">
+        <div class="container">
+            {{> facebook_like }}
+        </div>
+    </section>
 
-    <footer>
+    <footer class="bg-dark super-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -92,7 +94,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright © {{ config.site.name }} and <a target="_blank" href="{{config.author.url}}">{{ config.author.name }}</a> 2015</p>
+                    <p class="copyright">Copyright © {{ config.site.name }} and <a target="_blank" href="{{config.author.url}}">{{ config.author.name }}</a> 2015</p>
                 </div>
             </div>
         </div>
