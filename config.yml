@@ -37,10 +37,10 @@ menus:
 next:
   when: july 12th 12:00
   loc:
-    name: Bar, Montenegro
-    lat: 42.10
-    lng: 19.10
-    zoom: 11
+    name: Business Center of Bar, Montenegro (<a href="http://www.bscbar.org/" target="_blank">www.bscbar.org</a>)
+    lat: 42.1040
+    lng: 19.0996
+    zoom: 13
 
 # Disqus configuration, comment these lines to disable it
 # Services
