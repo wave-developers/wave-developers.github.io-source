@@ -13,7 +13,7 @@
     <meta property="fb:app_id" content="{{ config.facebook.appid }}" />
     <meta property="og:title" content="{{ config.site.name}}">
     <meta property="og:description" content="{{ config.site.description}}">
-    <meta property="og:image" content="{{ page.facebook.image}}">
+    <meta property="og:image" content="{{ config.site.url }}{{ page.facebook.image}}">
 
     {{> google_verification }}
 
