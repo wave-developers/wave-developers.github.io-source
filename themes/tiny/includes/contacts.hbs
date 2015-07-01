@@ -1,16 +1,19 @@
 {{#if contacts}}
     <p>
-        {{#if contacts.facebook}}
-            <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
-        {{/if}}
         {{#if contacts.email}}
           <a target="_blank" href="mailto:{{contacts.email}}"><i class="fa fa-envelope"></i></a>
+        {{/if}}
+        {{#if contacts.facebook}}
+          <a target="_blank" href="https://www.facebook.com/{{contacts.facebook}}"><i class="fa fa-facebook-official"></i></a>
         {{/if}}
         {{#if contacts.github}}
             <a target="_blank" href="https://www.github.com/{{contacts.github}}"><i class="fa fa-github"></i></a>
         {{/if}}
+        {{#if contacts.instagram}}
+            <a target="_blank" href="https://www.instagram.com/{{contacts.instagram}}"><i class="fa fa-instagram"></i></a>
+        {{/if}}
         {{#if contacts.linkedin}}
-            <a target="_blank" href="https://www.linkedin.com/pub/{{contacts.linkedin}}"><i class="fa fa-linkedin"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/{{contacts.linkedin}}"><i class="fa fa-linkedin"></i></a>
         {{/if}}
         {{#if contacts.site}}
             <a target="_blank" href="{{contacts.site}}"><i class="fa fa-user"></i></a>
