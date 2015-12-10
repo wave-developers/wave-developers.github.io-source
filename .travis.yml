@@ -13,3 +13,6 @@ env:
   global:
   - GH_REF: github.com/wave-developers/wave-developers.github.io.git
   - secure: h8fmWqC5udb7Tz5/ziuKYaj0S/kuNDgrKJZ7QqjwGJTLk88yyZAiG7GWHymrdEPs3DN9Ddv2lYNgC0wQ9GSVhqDIbHahB+AG4oGn6/VXaUCXq3wAlj92SAcOI7sy2hK380/T/hPhpYDQrYmwCQ51PGT2G8qWrXBvYA5JkX2L8Co=
+
+notifications:
+  slack: wave-developers:bNaixBDV6ZJjwrMuboRUrxD2
