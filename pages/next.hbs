@@ -28,10 +28,12 @@ speakers:
             locale: ru
 
     - id: eugene-potapenko
-      name: Eugene Potapenko
+      name: Eugene&nbsp;Potapenko
+      title: Full Stack по новому
       contacts:
           site: http://playphrase.me
           twitter: potapenko
+      description: Опыт использования ClojureScript + React.js/Node.js в разработке.
 
     - id: sergii-liskovskyi
       name: Sergii Liskovskyi
@@ -70,9 +72,9 @@ source: "edit/master/pages/next.hbs"
         {{#each speakers}}
             <div class="row">
                 <div class="col-md-3 speaker-block">
-                    <h3 id="{{id}}">{{name}}
+                    <h3 id="{{id}}">{{{name}}}
                         {{#if title}}
-                            :: <small> {{{title}}}</small>
+                            <span class="hidden-lg hidden-md">::</span> <small> {{{title}}}</small>
                         {{/if}}
                     </h3>
                 </div>
