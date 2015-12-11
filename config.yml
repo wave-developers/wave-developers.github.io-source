@@ -35,12 +35,12 @@ menus:
 # next event
 
 next:
-  when: july 12th 12:00
+  when: dec 13th 14:00
   loc:
-    name: Business Center of Bar, Montenegro (<a href="http://www.bscbar.org/" target="_blank">www.bscbar.org</a>)
-    lat: 42.1040
-    lng: 19.0996
-    zoom: 13
+    name: Дом Художника "Dukley art center / Kotor" (<a href="http://dukleyart.me/" target="_blank">dukleyart.me</a>)
+    lat: 42.4222
+    lng: 18.7687
+    zoom: 15
 
 # Disqus configuration, comment these lines to disable it
 # Services

@@ -2,101 +2,88 @@
 layout: default.hbs
 
 title: "Monte Developers Meetup #04"
-description: "Internet Of Things (IoT)"
-image: "/events/2015-07-12.jpg"
+description: "2015 Summery"
+image: "/events/2015-12-13.jpg"
 
 speakers:
-    - id: alex-pazhyn
-      name: Alex Pazhyn
+    - id: andriy-bazyuta
+      name: Andriy Bazyuta
+
+    - id: eugene-krevenets
+      name: Eugene Krevenets
+      title: Docker or Micro Services for Lazy Developers
       contacts:
-          facebook: alex.pazhyn
-          instagram: alex_pazhyn
-          linkedin: in/alexpazhyn
-      about:
-          - text: UI designer in Ciklum Interactive, Ukraine. Over 5 years of experience in design. Started the career path in identity and printing, and then switched to web and mobile apps.
-            locale: en
+          github: hyzhak
+          facebook: hyzhak
+          linkedin: in/eugenekrevenets
+          site: http://hyzhak.github.io
+          slideshare: EugeneKrevenets
+          stackoverflow: 1324730/eugene-krevenets
+          twitter: hyzhak_en
       description:
           - text: >
-                <p>
-                    Designing for Internet of things:
-                </p>
-                <ul>
-                    <li>What’s the IOT means and how it works</li>
-                    <li>What UIs exist for IOT and how to design for IOT</li>
-                    <li>Future Interfaces and best cases for today</li>
-                </ul>
-
-    - id: andrey-novikov
-      name: Andrey Novikov
-      contacts:
-          linkedin: pub/andrey-novikov/44/b42/671
-      description:
-          - text: >
-                Using Development Boards based on ARM-CPU in modern experimental physics.<br/>
-                STM32F4xx- Chip - modern control unit for experimental instrument <br/>
-                Raspberry - “child-friendly ARM development board”
-
-    - id: konstantin-mirin
-      name: Konstantin Mirin
-      about:
-          - text: 12 years of coding, 5 years being CEO. Enjoy working with edge technologies and see good niche in Internet Of Things and energy saving solutions
+                  How to use Docker to build enviropment to develop web application and get&nbsp;fun
             locale: en
-          - text: 12 лет кодинга, 5 лет в роли CEO. Нравится работать с последними технологиями и вижу отличную нишу в области Интернета Вещей и энергосберегающих технологий.
-            locale: ru
-      description:
-          - text: How to schedule lighting intensity using smartphone? Have you ever seen Philips Hue? Lifx? Marlight? Ever wanted to created it yourself? We’ll go through our approach where we create lighting solution for halls with two hundred light arrays.
-            locale: en
-          - text: Как регулируют освещенность с телефона по расписанию? Видели ли вы Philips Hue? Lifx? Marlight? Хотели ли сделать такое самостоятельно? Я расскажу, как мы делаем систему для освещения выставочных залов с двумя сотнями осветительных блоков.
+          - text: Использование Docker-compose для развертывания среды разработки веб приложения
             locale: ru
 
-    - id: paul-dmitryev
-      name: Paul Dmitryev
+    - id: eugene-potapenko
+      name: Eugene&nbsp;Potapenko
+      title: Full Stack по новому
       contacts:
-          stackoverflow: 29503/cleg
-          github: cleg
-          twitter: cleg
+          site: http://playphrase.me
+          twitter: potapenko
+      description: Опыт использования ClojureScript + React.js/Node.js в разработке.
 
+    - id: sergii-liskovskyi
+      name: Sergii Liskovskyi
+      title: ESP8266 - революция в мире IoT
+      description:
+        - text: >
+            <ul>
+              <li>Обзор чипа ESP8266</li>
+              <li>Язык Lua для программирования чипа ESP8266</li>
+              <li>Протокол MQTT и его применение в IoT</li>
+              <li>Альтернативные решения для IoT</li>
+            </ul>
+          locale: ru
+
+    - id: vadik-rastyagaev
+      name: Vadik Rastyagaev
+      title: Web&nbsp;components and Polymer
+      contacts:
+          email: rastyagaev@gmail.com
       description:
           - text: >
-                <p>Pebble Watch as your smart home remote control</p>
                 <ul>
-                  <li>Why Pebble is the only smart watch, existing now</li>
-                  <li>Pebble development overview</li>
-                  <li>Simple Pebble.js application</li>
-                  <li>Pebble Time and future of Pebble</li>
+                  <li>Components on the web</li>
+                  <li>Native web components</li>
+                  <li>The Polymer library</li>
                 </ul>
             locale: en
-          - text: >
-                <p>Pebble Watch как пульт управления цифровым домом</p>
-                <ul>
-                  <li>Почему Pebble — единственные умные часы, существующие сейчас</li>
-                  <li>Разработка под Pebble — общий взгляд</li>
-                  <li>Пример простого приложения с Pebble.js</li>
-                  <li>Pebble Time и будущие перспективы Pebble</li>
-                </ul>
-            locale: ru
+
 
 joinon:
-  facebook: 1640227989552317
-  lanyrd: 2015/hyzhak-en
-  meetup: 223517182
+  facebook: 1657795444471708
+  lanyrd: ?
+  meetup: 227334828
 
 facebook:
-  image: "/assets/images/screenshots/event-2015-07-12.jpg"
+  image: "/assets/images/screenshots/event-2015-12-13.jpg"
 
 source: "edit/master/pages/next.hbs"
 ---
 
 <article class="is-post container">
-    <h1>Future event <small>June 2015</small></h1>
+    <h1>Future event <small>Dec 2015</small></h1>
     <sections id="speakers">
         <h2>Speakers</h2>
         {{#each speakers}}
             <div class="row">
                 <div class="col-md-3 speaker-block">
-                    <h3 id="{{id}}">{{name}}
+                    <h3 id="{{id}}">{{{name}}}
                         {{#if title}}
-                            :: <small> {{title}}</small>
+                            <span class="hidden-lg hidden-md">::</span> <small> {{{title}}}</small>
                         {{/if}}
                     </h3>
                 </div>
@@ -137,16 +124,6 @@ source: "edit/master/pages/next.hbs"
     <section id="time">
         <h2>Date & Time</h2>
         <p>{{config.next.when}}</p>
-    </section>
-    <hr/>
-    <section id="fee">
-        <h2>Fee</h2>
-        <p>
-          We collect 5 euros per guest. All money will be spend on rent, coffee and snacks.
-        </p>
-        <p>
-          If you can find sponsors to prevent payments, please <a href="/about.html#contacts">contact us</a>
-        </p>
     </section>
     <hr/>
     <section id="join">
