@@ -15,8 +15,12 @@ source: "edit/master/pages/about.hbs"
 is_next_item_active: true
 ---
 
-<article class="text-center container">
-    <section id="we-are">
+<article class="text-center container about-page">
+  <section class="logo">
+    <div class="title">Wave Developers</div>
+    <img class="icon" src="/assets/images/icon-199x200.png" alt="" width="100" height="100"/>
+  </section>
+    <section class="we-are">
         <h1>We are</h1>
         <p>
             It's group of passionate geeks that lives near the sea.
@@ -25,7 +29,7 @@ is_next_item_active: true
         </p>
     </section>
     <hr/>
-    <section id="contacts">
+    <section class="contacts">
         <h1>Contacts</h1>
         <h2><i class="fa fa-envelope-square"></i> Email</h2>
         <a target="_blank" href="mailto:{{ config.email.account }}">{{ config.email.account }}</a>
