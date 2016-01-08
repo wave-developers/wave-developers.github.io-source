@@ -35,12 +35,12 @@ menus:
 # next event
 
 next:
-  when: dec 13th 14:00
+  when: begining of february
   loc:
-    name: Дом Художника "Dukley art center / Kotor" (<a href="http://dukleyart.me/" target="_blank">dukleyart.me</a>)
-    lat: 42.4222
-    lng: 18.7687
-    zoom: 15
+    name: ???
+    lat: '???'
+    lng: '???'
+    zoom: '???'
 
 # Disqus configuration, comment these lines to disable it
 # Services
