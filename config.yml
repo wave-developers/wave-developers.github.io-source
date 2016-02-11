@@ -35,7 +35,7 @@ menus:
 # next event
 
 next:
-  when: begining of february
+  when: the end of february
   loc:
     name: ???
     lat: '???'
