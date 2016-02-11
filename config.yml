@@ -74,3 +74,7 @@ twitter:
 
 youtube:
   account: UCGu3STPtjYgKHz0g4DM9Evw
+
+repo:
+  branches:
+    default: feature/meetup-6

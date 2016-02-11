@@ -55,19 +55,15 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
-                        {{#if page.source}}
-
-                            <li>
-                                <a class="text-danger" target="_blank" href="https://github.com/wave-developers/wave-developers.github.io-source/{{ page.source }}"
-                                   title="Help improve this page">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-pencil fa-inverse"></i>
-                                </span>
-                                </a>
-                            </li>
-
-                        {{/if}}
+                        <li>
+                            <a class="text-danger" target="_blank" href="https://github.com/wave-developers/wave-developers.github.io-source/edit/{{ config.repo.branches.default }}/{{ page.src }}"
+                               title="Help improve this page">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-pencil fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
                         <li>
                             <a target="_blank" href="https://twitter.com/{{ config.twitter.account }}">
                             <span class="fa-stack fa-lg">
