@@ -2,3 +2,6 @@
 source of static github page
 
 [wave-developers.github.io](http://wave-developers.github.io), [target repo](https://github.com/wave-developers/wave-developers.github.io)
+
+## Recommendations
+feel free add emotions by [emo-icons :ocean:](http://www.emoji-cheat-sheet.com/)
