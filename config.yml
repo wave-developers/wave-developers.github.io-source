@@ -37,10 +37,10 @@ menus:
 next:
   when: the end of february
   loc:
-    name: ???
-    lat: '???'
-    lng: '???'
-    zoom: '???'
+    name: Podgorica
+    lat: '42.441286'
+    lng: '19.262892'
+    zoom: '12'
 
 # Disqus configuration, comment these lines to disable it
 # Services
