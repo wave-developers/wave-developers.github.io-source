@@ -35,7 +35,7 @@ menus:
 # next event
 
 next:
-  when: the end of february
+  when: 28th february
   loc:
     name: Podgorica
     lat: '42.441286'
