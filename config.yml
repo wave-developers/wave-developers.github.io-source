@@ -35,12 +35,12 @@ menus:
 # next event
 
 next:
-  when: 28th february
+  when: 28th february, 14:00
   loc:
-    name: Podgorica
-    lat: '42.441286'
-    lng: '19.262892'
-    zoom: '12'
+    name: Kulturni centar Gavroche / Podgorica / Montenegro
+    lat: '42.4443534'
+    lng: '19.2650669'
+    zoom: '16'
 
 # Disqus configuration, comment these lines to disable it
 # Services
