@@ -76,7 +76,7 @@ is_next_item_active: true
       context.lineTo ((i - t) * p, 50);
       context.quadraticCurveTo (
         (i - t + 0.5) * p,
-        50 + 15 * (Math.sin(t * Math.PI + i - t) + 2) * (1 - 2 * (i % 2)),
+        50 + 15 * (Math.sin(t * Math.PI + i - t) + 2) * (2 * (i % 2) - 1),
         (i - t + 1) * p, 50);
     }
     context.fill ();
