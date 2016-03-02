@@ -48,3 +48,42 @@ is_next_item_active: true
       <span>Design of logo by <a href="https://www.facebook.com/yuraugarov" target="_blank"><i class="fa fa-facebook-official"></i> Yura Ugarov</span>
     </section>
 </article>
+<script>
+(function () { if (window.Path2D) {
+  var canvas = document.createElement ('canvas');
+  canvas.classList.add ('icon');
+  canvas.width = canvas.height = 200;
+  canvas.style.width = canvas.style.height = '100px';
+  var image = document.querySelector ('img.icon');
+  image.parentElement.appendChild (canvas);
+  image.parentElement.removeChild (image);
+  var path = new Path2D ('M 50.75 -0.25 L 12 -0.25 Q 1.29296875 0.904296875 0.875 11.875 L 0.875 88.125 Q 1.7271484375 98.892578125 12 100.25 L 50.75 100.25 Q 72.8 98.65 85.65 83.3 97.3 69.35 97.35 50 97.35 30.65 85.75 16.7 72.9 1.35 50.75 -0.25 Z');
+  var context = canvas.getContext ('2d');
+  context.setTransform (2, 0, 0, 2, 0, 0);
+  var render = function () {
+    context.clearRect (0, 0, 100, 100);
+    context.save ();
+    context.clip (path);
+    context.fillStyle = '#3ea9f5';
+    context.fillRect (0, 0, 100, 100);
+    context.fillStyle = '#3ed2ff';
+    context.lineWidth = 8;
+    context.strokeStyle = '#fff';
+    context.beginPath ();
+    context.moveTo (50, -666);
+    var t = (Date.now () % 600) / 300, p = 30;
+    for (var i = -1; i < 6; i++) {
+      context.lineTo ((i - t) * p, 50);
+      context.quadraticCurveTo (
+        (i - t + 0.5) * p,
+        50 + 15 * (Math.sin(t * Math.PI + i - t) + 2) * (2 * (i % 2) - 1),
+        (i - t + 1) * p, 50);
+    }
+    context.fill ();
+    context.stroke ();
+    context.restore ();
+    requestAnimationFrame (render);
+  };
+  render ();
+}}) ();
+</script>
