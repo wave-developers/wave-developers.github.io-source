@@ -1,0 +1,86 @@
+---
+layout: default.hbs
+
+---
+
+<article class="is-post container">
+    <h1>{{config.next.when}} <small>{{{title}}} - {{{description}}}</small></h1>
+    <sections id="speakers">
+        <h2>Speakers: we're still accepting <a href="/call.html">new speakers</a></h2>
+        {{#each speakers}}
+            <div class="row">
+                <div class="col-md-3 speaker-block">
+                    <h3 id="{{id}}">{{{name}}}
+                        {{#if title}}
+                            <span class="hidden-lg hidden-md">::</span> <small> {{{title}}}</small>
+                        {{/if}}
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 speaker-block">
+                    {{#if id}}
+                        <p>
+                            <img src="/assets/images/speakers/{{id}}.jpg" width="128" height="128" title="{{name}}"/>
+                        </p>
+                    {{/if}}
+
+                    {{>contacts}}
+                </div>
+                <div class="col-md-9">
+                    {{>all_locales description}}
+                </div>
+            </div>
+            {{#draft}}
+                {{#if photo}}
+                    <img src="{{photo}}" alt="{{name}}"/>
+                {{/if}}
+                <h3>{{name}}</h3>
+                {{>all_locales description}}
+            {{/draft}}
+        {{/each}}
+        <br/>
+        <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Submit speaker request</a>
+    </sections>
+    <hr/>
+    <section id="place">
+        <h2>Place:</h2>
+        {{>next_event_map}}
+        <h3>Address:</h3>
+        <p>{{{config.next.loc.name}}}</p>
+    </section>
+    <hr/>
+    <section id="time">
+        <h2>Date & Time:</h2>
+        <p>{{config.next.when}}</p>
+    </section>
+    <hr/>
+    <section id="join">
+        <h2>Join Us On</h2>
+        <div>
+            {{#if joinon.meetup}}
+            <a href="http://www.meetup.com/wavedevs/events/{{joinon.meetup}}/" target="_blank">
+                <img src="/assets/images/social/meetup.jpg" alt="meetup" width="64" height="64"/>
+            </a>
+            {{/if}}
+            {{#if joinon.lanyrd}}
+            <a href="http://lanyrd.com/{{joinon.lanyrd}}/" target="_blank">
+                <img src="/assets/images/social/lanyrd.jpg" alt="lanyrd" width="64" height="64"/>
+            </a>
+            {{/if}}
+            {{#if joinon.facebook}}
+            <a href="https://www.facebook.com/events/{{joinon.facebook}}/" target="_blank">
+                <img src="/assets/images/social/facebook.jpg" alt="facebook" width="64" height="64"/>
+            </a>
+            {{/if}}
+            {{#if joinon.googlecalendar}}
+            <a href="https://www.google.com/calendar/event?action=TEMPLATE&tmeid={{joinon.googlecalendar}}&tmsrc=hyzhaka%40gmail.com" target="_blank">
+                <img src="/assets/images/social/google-calendar.jpg" alt="google calendar" width="64" height="64"/>
+            </a>
+            {{/if}}
+        </div>
+        <p>
+            <a href="/about.html#contacts">Contacts Us</a>
+        </p>
+    </section>
+</article>
