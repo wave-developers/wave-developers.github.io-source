@@ -18,19 +18,19 @@ menus:
   - id: next
     active: true
     name: Next Event
-    url: /next.html
+    url: /next
 
   - id: call
     name: Call 4 Speakers
-    url: /call.html
+    url: /call
 
   - id: support
     name: Support Us
-    url: /support.html
+    url: /support
 
   - id: about
     name: About
-    url: /about.html
+    url: /about
 
 # next event
 

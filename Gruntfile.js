@@ -21,8 +21,13 @@ module.exports = function(grunt) {
 
                 plugins: [
                     'assemble-middleware-rss',
-                    'assemble-middleware-sitemap'
+                    'assemble-middleware-sitemap',
+                    'grunt-assemble-permalinks'
                 ],
+
+                permalinks: {
+                    structure: ':basename/index.html'
+                },
 
                 rss: {
                     title: 'Wave Developers',

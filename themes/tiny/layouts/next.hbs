@@ -6,7 +6,7 @@ layout: default.hbs
 <article class="is-post container">
     <h1>{{config.next.when}} <small>{{{title}}} - {{{description}}}</small></h1>
     <sections id="speakers">
-        <h2>Speakers: we're still accepting <a href="/call.html">new speakers</a></h2>
+        <h2>Speakers: we're still accepting <a href="/call">new speakers</a></h2>
         {{#each speakers}}
             <div class="row">
                 <div class="col-md-3 speaker-block">
@@ -40,7 +40,7 @@ layout: default.hbs
             {{/draft}}
         {{/each}}
         <br/>
-        <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Submit speaker request</a>
+        <a href="/call" class="btn btn-success"><i class="fa fa-user-plus"></i> Submit speaker request</a>
     </sections>
     <hr/>
     <section id="place">
@@ -80,7 +80,7 @@ layout: default.hbs
             {{/if}}
         </div>
         <p>
-            <a href="/about.html#contacts">Contacts Us</a>
+            <a href="/about#contacts">Contacts Us</a>
         </p>
     </section>
 </article>

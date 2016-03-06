@@ -23,7 +23,7 @@ facebook:
             </p>
 
             <p>
-                <a href="/next.html" class="btn btn-danger btn-lg join-us" type="button"><i class="fa fa-anchor"></i>&nbsp;&nbsp;Join
+                <a href="/next" class="btn btn-danger btn-lg join-us" type="button"><i class="fa fa-anchor"></i>&nbsp;&nbsp;Join
                     us at {{config.next.when}}!
                 </a>
             </p>
@@ -41,7 +41,7 @@ facebook:
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {{#is data.section 'event'}}
-                    <a href="events/{{pagename}}" class="post-preview">
+                    <a href="events/{{basename}}" class="post-preview">
                         <h2 class="post-title">
                             {{data.title}}
                         </h2>
@@ -63,7 +63,7 @@ facebook:
         {{/withSort}}
     </div>
     <div>
-        <h1>Location <small>of <a href="/next.html#place">next</a> event</small></h1>
+        <h1>Location <small>of <a href="/next#place">next</a> event</small></h1>
         {{>next_event_map}}
     </div>
 </article>
