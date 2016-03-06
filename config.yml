@@ -34,13 +34,17 @@ menus:
 
 # next event
 
+# TODO: should put to /page/next.hbs
+# but need to find a way how go get info from next page
+# in /page/index.hbs page
+
 next:
-  when: 28th february, 14:00
+  when: 10th april, 12:00
   loc:
-    name: Kulturni centar Gavroche / Podgorica / Montenegro
-    lat: '42.4443534'
-    lng: '19.2650669'
-    zoom: '16'
+    name: Дом Художника "Dukley art center / Kotor" (<a href="http://dukleyart.me/" target="_blank">dukleyart.me</a>)
+    lat: '42.4222'
+    lng: '18.7687'
+    zoom: 15
 
 # Disqus configuration, comment these lines to disable it
 # Services
