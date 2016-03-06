@@ -1,82 +1,56 @@
 ---
 layout: default.hbs
 
-title: "Monte Developers Meetup #04"
-description: "2015 Summery"
-image: "/events/2015-12-13.jpg"
+title: "Monte Developers Meetup #06"
+description: "Let's get together to talk about mobile apps"
+image: "/events/2016-02-28.jpg"
 
 speakers:
-    - id: eugene-krevenets
-      name: Eugene Krevenets
-      title: Docker or Micro Services for Lazy Developers
-      contacts:
-          github: hyzhak
-          facebook: hyzhak
-          linkedin: in/eugenekrevenets
-          site: http://hyzhak.github.io
-          slideshare: EugeneKrevenets
-          stackoverflow: 1324730/eugene-krevenets
-          twitter: hyzhak_en
+    - id: dmitry-sher
+      name: Dmitry&nbsp;Sher
+      title:
       description:
-          - text: >
-                  How to use Docker to build enviropment to develop web application and get&nbsp;fun
-            locale: en
-          - text: Использование Docker-compose для развертывания среды разработки веб приложения
-            locale: ru
-
+      - text: Creating hybrid reactive mobile apps with Meteor.js and React
+        locale: en
+      - text: Опыт создания гибридных реактивных мобильных приложений на meteor+react
+        locale: ru
     - id: eugene-potapenko
       name: Eugene&nbsp;Potapenko
-      title: Full Stack по новому
+      title:
       contacts:
           site: http://playphrase.me
           twitter: potapenko
-      description: Опыт использования ClojureScript + React.js/Node.js в разработке.
-
-    - id: sergii-liskovskyi
-      name: Sergii Liskovskyi
-      title: ESP8266 - революция в мире IoT
-      contacts:
-          email: serge.liskovsky@gmail.com
+      description: React-Native
+    - id: konstantin-kovalev
+      name: Konstantin&nbsp;Kovalev
       description:
-        - text: >
-            <ul>
-              <li>Обзор чипа ESP8266</li>
-              <li>Язык Lua для программирования чипа ESP8266</li>
-              <li>Протокол MQTT и его применение в IoT</li>
-              <li>Альтернативные решения для IoT</li>
-            </ul>
-          locale: ru
-
-    - id: vadik-rastyagaev
-      name: Vadik Rastyagaev
-      title: Web&nbsp;components and Polymer
+      - text: Responsive design in existing one page web application
+        locale: en
+      - text: Опыт создания responsive design в существующем one page web application
+        locale: ru
+    - id: sreten-madzgalj
+      name: Sreten&nbsp;Madzgalj
+      title: React JS for the mobile web
       contacts:
-          email: rastyagaev@gmail.com
+          facebook: sreten.madzgalj
       description:
-          - text: >
-                <ul>
-                  <li>Components on the web</li>
-                  <li>Native web components</li>
-                  <li>The Polymer library</li>
-                </ul>
-            locale: en
-
+      - text: How we developed, deployed and maintained a React JS UI for the mobile web - advantages,
+              obstacles and lessons learned from a large scale news portal UI.
+        locale: en
 
 joinon:
-  facebook: 1657795444471708
-  lanyrd: ?
-  meetup: 227334828
+  facebook: 999143396846603
+  lanyrd: lanyrd
+  meetup: 229076609
 
 facebook:
-  image: "/assets/images/screenshots/event-2015-12-13.jpg"
-
-source: "edit/master/pages/next.hbs"
+  image: "/assets/images/screenshots/event-2016-02-28.jpg"
 ---
 
 <article class="is-post container">
-    <h1>Future event <small>Dec 2015</small></h1>
+    <h1>28th Feb 2016<small> Mobile&nbsp;development - how to build mobile app, how promote mobile apps, how to monetize mobile apps.</small></h1>
     <sections id="speakers">
-        <h2>Speakers</h2>
+        <h2>Speakers: we're still accepting new speakers</h2>
         {{#each speakers}}
             <div class="row">
                 <div class="col-md-3 speaker-block">
@@ -110,18 +84,18 @@ source: "edit/master/pages/next.hbs"
             {{/draft}}
         {{/each}}
         <br/>
-        <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Became a speaker (стать докладчиком)</a>
+        <a href="/call.html" class="btn btn-success"><i class="fa fa-user-plus"></i> Submit speaker request</a>
     </sections>
     <hr/>
     <section id="place">
-        <h2>Place</h2>
+        <h2>Place:</h2>
         {{>next_event_map}}
-        <h3>Address</h3>
+        <h3>Address:</h3>
         <p>{{{config.next.loc.name}}}</p>
     </section>
     <hr/>
     <section id="time">
-        <h2>Date & Time</h2>
+        <h2>Date & Time:</h2>
         <p>{{config.next.when}}</p>
     </section>
     <hr/>
@@ -129,7 +103,7 @@ source: "edit/master/pages/next.hbs"
         <h2>Join Us On</h2>
         <div>
             {{#if joinon.meetup}}
-            <a href="http://www.meetup.com/monte-dev-meetup/events/{{joinon.meetup}}/" target="_blank">
+            <a href="http://www.meetup.com/wavedevs/events/{{joinon.meetup}}/" target="_blank">
                 <img src="/assets/images/social/meetup.jpg" alt="meetup" width="64" height="64"/>
             </a>
             {{/if}}
